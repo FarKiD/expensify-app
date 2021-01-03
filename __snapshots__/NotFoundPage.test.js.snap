@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseDashboardPage correctly 1`] = `
+<div
+  className="alert alert-danger"
+>
+  Error 404! Page not found. 
+  <Link
+    to="/"
+  >
+    Go Home
+  </Link>
+</div>
+`;
