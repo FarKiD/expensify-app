@@ -1,5 +1,5 @@
 {
-  "name": "indecision-app",
+  "name": "Expensify-Ostadebrahim",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Sajjad Ostadebrahim",
@@ -27,6 +27,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
     "react-test-renderer": "^16.0.0",
+		"express": "^4.15.4",
     "redux": "^4.0.5",
     "uuid": "^8.3.1",
     "validator": "8.0.0"
