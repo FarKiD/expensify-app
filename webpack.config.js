@@ -1,8 +1,12 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 //const nodeExternals = require('webpack-node-externals');
 
-module.exports = {
-    entry: './src/app.js',
+module.exports = (env) => {
+	const isProduction = env.production === true;
+	
+	return {
+		entry: './src/app.js',
     output: {
         path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
@@ -15,15 +19,21 @@ module.exports = {
         }, {
             test: /\.s?css$/,
             use: [
-                'style-loader',
-                'css-loader',
-                'sass-loader'
-            ]
+							MiniCssExtractPlugin.loader,
+							'css-loader',
+							'sass-loader'
+						]
         }]
     },
-    devtool: 'eval-cheap-module-source-map',
+		plugins: [
+			new MiniCssExtractPlugin({
+				filename: 'styling.css'
+			})
+		],
+    devtool: isProduction ? 'source-map' : 'eval-cheap-module-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'public'),
 				historyApiFallback: true
     }
+	};
 };
