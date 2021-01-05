@@ -1,2 +1,8 @@
 node_modules/
+public/bundle.js
+public/bundle.js.map
+public/styling.css
+public/styling.css.map
+public/debug.log
+public/scripts.app.js
 dummy-webpack.config.js
