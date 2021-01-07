@@ -4,7 +4,8 @@ import { SingleDatePicker } from 'react-dates';
 import { v4 as uuidv4 } from 'uuid';
 
 const now = moment();
-console.log(now.format('MMM Do, YYYY'));
+
+//TODO don't allow 0 amounts
 
 export default class ExpenseForm extends React.Component {
 	constructor(props) {

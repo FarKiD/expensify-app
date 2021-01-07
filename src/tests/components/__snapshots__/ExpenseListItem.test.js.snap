@@ -11,8 +11,8 @@ exports[`should render ExpenseListItem with expense 1`] = `
   </Link>
   <p>
     500
-     - 
-    0
+     Toman -
+    January 1st, 1970
   </p>
 </div>
 `;
